@@ -1,0 +1,27 @@
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode files
+**/DerivedData/
+**/build/
+**/.swiftpm/
+**/*.xcuserstate
+**/*.xcworkspace/xcuserdata/
+**/*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+**/*.xcodeproj/project.xcworkspace/
+**/*.xcodeproj/xcuserdata/
+**/*.xcodeproj/project.xcworkspace/xcuserdata/
+**/*.xcodeproj/xcshareddata/WorkspaceSettings.xcsettings
+
+ 
+# Xcode config files
+**/*.mode1v3
+**/*.mode2v3
+**/*.perspectivev3
+
+# logs and caches
+*.log
+xcuserdata/
