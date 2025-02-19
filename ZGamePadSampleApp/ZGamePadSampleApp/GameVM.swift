@@ -37,6 +37,4 @@ extension GameVM: MGamepadDelegate {
     func mGamepad_buttonPressed(btnTuple: ZGamePadFramework.BtnTuple) {
         print(btnTuple)
     }
-    
-    
 }

@@ -14,6 +14,7 @@
 		0C99CE2D2D665B6C00CC1F59 /* GameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C99CE2C2D665B6C00CC1F59 /* GameVM.swift */; };
 		0C99CE302D665C1800CC1F59 /* ZGamePadFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C99CE2F2D665C1800CC1F59 /* ZGamePadFramework.framework */; };
 		0C99CE312D665C1800CC1F59 /* ZGamePadFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C99CE2F2D665C1800CC1F59 /* ZGamePadFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C99CE352D665FFD00CC1F59 /* DPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C99CE342D665FFD00CC1F59 /* DPadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,7 @@
 		0C4C99B32D66588200807BA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C99CE2C2D665B6C00CC1F59 /* GameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVM.swift; sourceTree = "<group>"; };
 		0C99CE2F2D665C1800CC1F59 /* ZGamePadFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZGamePadFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C99CE342D665FFD00CC1F59 /* DPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				0C4C99AC2D66588000807BA8 /* ZGamePadSampleAppApp.swift */,
 				0C4C99AE2D66588000807BA8 /* ContentView.swift */,
+				0C99CE382D666AC000CC1F59 /* SubViews */,
 				0C99CE2C2D665B6C00CC1F59 /* GameVM.swift */,
 				0C4C99B02D66588200807BA8 /* Assets.xcassets */,
 				0C4C99B22D66588200807BA8 /* Preview Content */,
@@ -95,6 +98,14 @@
 				0C99CE2F2D665C1800CC1F59 /* ZGamePadFramework.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C99CE382D666AC000CC1F59 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				0C99CE342D665FFD00CC1F59 /* DPadView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C4C99AF2D66588000807BA8 /* ContentView.swift in Sources */,
+				0C99CE352D665FFD00CC1F59 /* DPadView.swift in Sources */,
 				0C99CE2D2D665B6C00CC1F59 /* GameVM.swift in Sources */,
 				0C4C99AD2D66588000807BA8 /* ZGamePadSampleAppApp.swift in Sources */,
 			);

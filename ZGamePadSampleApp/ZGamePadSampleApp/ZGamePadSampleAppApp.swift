@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ZGamePadSampleAppApp: App {
+    @StateObject var gameVM = GameVM()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(gameVM)
         }
     }
 }
