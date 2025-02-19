@@ -4,27 +4,27 @@
 
 import GameController
 
-typealias BtnTuple = (btnName: BtnName, isPressed: Bool, value: Float, player: Int)
+public typealias BtnTuple = (btnName: BtnName, isPressed: Bool, value: Float, player: Int)
 
-enum BtnName {
+public enum BtnName {
     case A, B, X, Y  // Right buttons
     case LS, RS      // Shoulder buttons (left/right)
     case LT, RT      // Triggers buttons  (left/right)
     case menu, home, options
 }
 
-protocol MGamepadDelegate: AnyObject {
+public protocol MGamepadDelegate: AnyObject {
     func mGamepad_LStick(x: Float, y: Float, player: Int)
     func mGamepad_RStick(x: Float, y: Float, player: Int)
     func mGamepad_dpadPressed(x: Float, y: Float, player: Int)
     func mGamepad_buttonPressed(btnTuple: BtnTuple)
 }
 
-final class MGamepad {
-    weak var delegate: MGamepadDelegate?
+final public class ZGamepad {
+    public weak var delegate: MGamepadDelegate?
     let notifCenter = NotificationCenter.default
     
-    init() {
+    public init() {
         notifCenter.addObserver(self, selector: #selector(gamepadDidConnect),
                                 name: .GCControllerDidConnect, object: nil)
         notifCenter.addObserver(self, selector: #selector(gamepadDidDisconnect),
