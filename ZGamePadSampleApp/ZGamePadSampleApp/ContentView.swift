@@ -12,8 +12,7 @@ struct ContentView: View {
             Text("dPad").frame(maxWidth: .infinity, alignment: .leading)
             Text("x: \(vm.dpad.x) y: \(vm.dpad.y)").monospaced()
                 .frame(maxWidth: .infinity, alignment: .leading)
-            DPadView()
-                .frame(width: DPadView.w, height: DPadView.w)
+            DPadView(dpad: $vm.dpad)
         }
         .padding()
     }
