@@ -10,6 +10,7 @@ public enum BtnName {
     case A, B, X, Y  // Right buttons
     case LS, RS      // Shoulder buttons (left/right)
     case LT, RT      // Triggers buttons  (left/right)
+    case LStick, RStick
     case menu, home, options
 }
 
@@ -64,7 +65,7 @@ final public class ZGamepad {
     }
     
     private func handleInputDetected(_ gamepad: GCExtendedGamepad, element: GCControllerElement, player: Int) {
-        print(Self.self, #function)
+        // print(Self.self, #function)
         var btnTuple: BtnTuple?
         
         switch element {
@@ -109,6 +110,13 @@ final public class ZGamepad {
             btnTuple = (.home, gamepad.buttonHome!.isPressed, gamepad.buttonHome!.value, player)
         case gamepad.buttonOptions:
             btnTuple = (.options, gamepad.buttonOptions!.isPressed, gamepad.buttonOptions!.value, player)
+            
+            
+        case gamepad.leftThumbstickButton:
+            btnTuple = (.LStick, gamepad.leftThumbstickButton?.isPressed ?? false, gamepad.leftThumbstickButton?.value ?? 0, player)
+        case gamepad.rightThumbstickButton:
+            btnTuple = (.RStick, gamepad.rightThumbstickButton?.isPressed ?? false, gamepad.rightThumbstickButton?.value ?? 0, player)
+
         default: break
         }
         if let btnTuple {

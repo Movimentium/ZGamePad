@@ -12,7 +12,16 @@ struct ContentView: View {
             Text("dPad").frame(maxWidth: .infinity, alignment: .leading)
             Text("x: \(vm.dpad.x) y: \(vm.dpad.y)").monospaced()
                 .frame(maxWidth: .infinity, alignment: .leading)
-            DPadView(dpad: $vm.dpad)
+            HStack {
+                StickView(stickPnt: $vm.lStick,
+                          isPressed: $vm.isPressedLStick)
+                Spacer()
+            }
+            HStack {
+                DPadView(dpad: $vm.dpad)
+                StickView(stickPnt: $vm.rStick,
+                          isPressed: $vm.isPressedRStick)
+            }
         }
         .padding()
     }

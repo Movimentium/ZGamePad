@@ -8,7 +8,7 @@ struct DPadView: View {
     @Binding var dpad: CGPoint
 
     var bgColor: Color = .black
-    static let w: CGFloat = 90
+    static var w: CGFloat = 90
     private let a = 0.75
     
     var body: some View {

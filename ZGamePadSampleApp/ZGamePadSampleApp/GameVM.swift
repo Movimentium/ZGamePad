@@ -11,6 +11,8 @@ final class GameVM: ObservableObject {
     @Published var dpad: CGPoint = .zero    // (±1, ±1) & (0,0) y sus variaciones
     @Published var lStick: CGPoint = .zero
     @Published var rStick: CGPoint = .zero
+    @Published var isPressedLStick = false
+    @Published var isPressedRStick = false
 
     
     
@@ -36,5 +38,33 @@ extension GameVM: MGamepadDelegate {
     
     func mGamepad_buttonPressed(btnTuple: ZGamePadFramework.BtnTuple) {
         print(btnTuple)
+        switch btnTuple.btnName {
+//        case .A:
+//            
+//        case .B:
+//            
+//        case .X:
+//            
+//        case .Y:
+//            
+//        case .LS:
+//            
+//        case .RS:
+//            
+//        case .LT:
+//            
+//        case .RT:
+            
+        case .LStick:  isPressedLStick = btnTuple.isPressed
+        case .RStick:  isPressedRStick = btnTuple.isPressed
+            
+//        case .menu:
+//            
+//        case .home:
+//            
+//        case .options:
+            
+        default: break
+        }
     }
 }
